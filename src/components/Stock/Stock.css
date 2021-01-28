@@ -1,28 +1,12 @@
-.yearlyData {
-    font-size: 2rem;
-    align-items: center;
+.formDiv{
+    text-align: center;
 }
 
-.yearlyDataContainer{
-    align-items: center;
-    margin-bottom: 3%;
+Form {
+    width:50%;
+    margin: 0 auto;
 }
 
-.stockNameAndPrice{
-    margin-top: 1%;
-    margin-bottom: 1%;
+Button{
+    margin-top: 0.5%;
 }
-
-.noPadding{
-    padding: 0;
-}
-
-
-/*.totalDiv{*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*span + span {*/
-/*    margin-left: 10px;*/
-/*}*/

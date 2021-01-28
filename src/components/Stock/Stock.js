@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import axios from "axios";
 import './Stock.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form} from "react-bootstrap";
+import {Form, Button} from "react-bootstrap";
 import StockData from "../StockData/StockData";
 
 class Stock extends Component {
-
     state = {
-        ticker: "AAPL",
+        ticker: "",
         results: []
     }
 
@@ -17,9 +16,8 @@ class Stock extends Component {
         const url = "https://financialmodelingprep.com/api/v3/quote/" +  this.state.ticker + "?apikey=" + key;
         axios.get(url)
             .then(response => {
-                const stock = response.data;
                 this.setState({
-                    results: stock
+                    results: response.data
                 });
             })
             .catch(function(error){
@@ -28,7 +26,7 @@ class Stock extends Component {
     }
 
     changeStock = (event) => {
-        this.setState({ticker: event.target.value});
+        this.setState({ticker: event.target.value.toUpperCase()});
     }
 
     updateStock = (event) => {
@@ -38,13 +36,17 @@ class Stock extends Component {
 
     render() {
         const form = (
-            <Form onSubmit={this.updateStock}>
-                <Form.Control
-                    placeholder="enter ticker/symbol"
-                    type="text"
-                    onChange={this.changeStock}
-                />
-            </Form>
+            <div className="formDiv">
+                    <Form onSubmit={this.updateStock}>
+                        <Form.Control
+                            placeholder="enter ticker/symbol"
+                            type="text"
+                            size="lg"
+                            onChange={this.changeStock}
+                        />
+                    </Form>
+                <Button onClick={this.updateStock} variant="success">Submit</Button>{' '}
+            </div>
         );
 
         const stock = this.state.results.map(stock => {
