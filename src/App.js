@@ -8,9 +8,7 @@ class App extends Component {
     render(){
         return (
             <div className="App">
-                <Stock
-                ticker="AAPL"
-                />
+                <Stock />
             </div>
         );
     }

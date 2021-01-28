@@ -1,0 +1,18 @@
+.yearlyData {
+    font-size: 2rem;
+    align-items: center;
+}
+
+.yearlyDataContainer{
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.stockNameAndPrice{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.noPadding{
+    padding: 0;
+}
