@@ -13,3 +13,35 @@
     margin-bottom: 1%;
 }
 
+.profitCard {
+    margin-left: 3%;
+}
+
+.numberOfSharesForm{
+    width: 20%;
+}
+
+.totalProfitTitle{
+    font-size: 2rem;
+}
+
+.totalProfit {
+    font-size: 2.25rem;
+}
+
+.percentLoss{
+    color: red;
+}
+
+.TESTING {
+    border: solid 1px black;
+    width: 100%;
+}
+
+#currentPrice{
+    font-size: 2.5rem;
+}
+
+#numOfShares{
+    font-size: 1.5rem;
+}

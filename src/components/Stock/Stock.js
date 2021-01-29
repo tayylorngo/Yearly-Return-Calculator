@@ -11,7 +11,7 @@ class Stock extends Component {
         results: []
     }
 
-    componentDidMount() {
+    loadStock() {
         const key = process.env.REACT_APP_SECRET_KEY;
         const url = "https://financialmodelingprep.com/api/v3/quote/" +  this.state.ticker + "?apikey=" + key;
         axios.get(url)
@@ -31,7 +31,7 @@ class Stock extends Component {
 
     updateStock = (event) => {
         event.preventDefault();
-        this.componentDidMount();
+        this.loadStock();
     }
 
     render() {
