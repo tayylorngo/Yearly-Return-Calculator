@@ -1,8 +1,20 @@
 # Stock Yearly Return Calculator
 
-This application simulates investments made into stock market assets
-based on the current yearly return of any stock. 
+This application allows you to see the total return 
+of a particular investment when purchased at the asset's
+yearly low, yearly average, and yearly high cost.
 
-You can simulate the return of any stock purchased 
+# Current Usage
 
-# Usage
+Enter the stock ticker/symbol and the stock data will appear.
+
+You can adjust the number of shares to calculate the total return.
+
+# Current Version
+https://yearlyreturncalculator.netlify.app/
+
+# Future Updates
+
+1. Allow for custom average cost
+2. Add company information
+3. Add support for Cryptocurrency
