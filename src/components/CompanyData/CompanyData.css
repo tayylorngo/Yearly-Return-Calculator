@@ -1,5 +1,5 @@
 #stockDescription{
-    width: 75%;
+    width: 100%;
     margin: auto;
     font-size: 1rem;
 }
@@ -19,4 +19,31 @@
 
 #stockName{
     margin-bottom: 1%;
+}
+
+#companyImage{
+    margin-top: 3%;
+}
+
+.companyInfoTable{
+    width: 50%;
+    margin: auto;
+}
+
+.lineShort{
+    width: 30%;
+}
+
+.companyFundamentals{
+    align-items: center;
+    margin: auto;
+}
+
+.aboutTitle{
+    font-size: 3rem;
+    margin-top: 13%;
+}
+
+.dataTable{
+    border: solid 1px black;
 }

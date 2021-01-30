@@ -2,14 +2,13 @@ import React, {Component} from 'react';
 import axios from "axios";
 import './Stock.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form, Button} from "react-bootstrap";
+import {Container, Row, Col, Form, Button} from "react-bootstrap";
 import StockData from "../StockData/StockData";
 
 class Stock extends Component {
     state = {
         ticker: "",
         results: [],
-        // results2: []
     }
 
     loadStock() {
@@ -58,12 +57,21 @@ class Stock extends Component {
                yearLow={stock.yearLow}
                yearHigh={stock.yearHigh}
                key={stock.symbol}
+               volume={stock.volume}
+               averageVol={stock.avgVolume}
+               pe={stock.pe}
            />
         });
 
         return (
             <div className="totalDiv">
-               {form}
+                <Container>
+                    <Row>
+                        <Col>
+                            {form}
+                        </Col>
+                    </Row>
+                </Container>
                {stock}
             </div>
         );

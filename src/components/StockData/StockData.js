@@ -34,6 +34,9 @@ class StockData extends Component {
     }
 
     priceifyNoColor(price){
+        if(price == null || typeof price == "undefined"){
+            return "";
+        }
         price = price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
         if(price < 0){
             price = "-$" + Math.abs(price).toFixed(2);
@@ -100,7 +103,6 @@ class StockData extends Component {
     render() {
         const loss = " loss";
         const gain = " gain";
-        const line = <hr/>;
 
         if(this.props.name === ""){
             return null;
@@ -261,12 +263,15 @@ class StockData extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    {line}
-                    {/*<CompanyData*/}
-                    {/*    key={this.props.ticker}*/}
-                    {/*    ticker={this.props.ticker}*/}
-                    {/*    name={this.props.name}*/}
-                    {/*/>*/}
+                    <br/>
+                    <CompanyData
+                        key={this.props.ticker}
+                        ticker={this.props.ticker}
+                        name={this.props.name}
+                        volume={typeof this.props.volume !== "undefined" ? this.priceifyNoColor(this.props.volume).slice(1) : ""}
+                        averageVol={typeof this.props.averageVol !== "undefined" ? this.priceifyNoColor(this.props.averageVol).slice(1) : ""}
+                        pe={this.props.pe !== null ? this.props.pe : ""}
+                    />
                 </div>
             );
         }
