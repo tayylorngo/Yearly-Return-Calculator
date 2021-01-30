@@ -40,10 +40,13 @@
 }
 
 .aboutTitle{
+    font-family: 'Londrina Solid', cursive;
     font-size: 3rem;
     margin-top: 13%;
+
 }
 
 .dataTable{
+    font-family: 'Nunito', sans-serif;
     border: solid 1px black;
 }

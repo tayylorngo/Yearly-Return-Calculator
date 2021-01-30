@@ -1,6 +1,7 @@
 .yearlyData {
     font-size: 2rem;
     align-items: center;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 .yearlyDataContainer{
@@ -11,6 +12,7 @@
 .stockNameAndPrice{
     margin-top: 1%;
     margin-bottom: 1%;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 .profitCard {
@@ -30,7 +32,7 @@
 }
 
 .percentLoss{
-    color: red;
+    color: rgb(255,80,0);
 }
 
 .TESTING {
@@ -54,6 +56,7 @@
 
 #numOfShares{
     font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif
 }
 
 #yearLow{
