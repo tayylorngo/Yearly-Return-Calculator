@@ -38,6 +38,16 @@
     width: 100%;
 }
 
+.customCostCard{
+    margin: auto;
+    width: 65%;
+}
+
+.averageCostForm{
+    margin-top: 1%;
+    width: 25%;
+}
+
 #currentPrice{
     font-size: 2.5rem;
 }
@@ -45,3 +55,20 @@
 #numOfShares{
     font-size: 1.5rem;
 }
+
+#yearLow{
+    color: red;
+}
+
+#yearAverage{
+    color: yellow;
+}
+
+#yearHigh{
+    color: green;
+}
+
+#customCostTitle{
+    font-size: 1.5rem;
+}
+

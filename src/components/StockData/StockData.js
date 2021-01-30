@@ -8,7 +8,8 @@ import './StockData.css';
 class StockData extends Component {
 
     state = {
-        shares: 1
+        shares: 1,
+        customAverageCost: this.props.currentPrice
     }
 
     getYearlyAverage(){
@@ -20,7 +21,7 @@ class StockData extends Component {
     }
 
     getPercentChange(purchasePrice, currentPrice){
-        if(this.state.shares === 0){
+        if(Number(this.state.shares) === 0){
             return 0;
         }
         else {
@@ -45,15 +46,15 @@ class StockData extends Component {
 
     priceify(price){
         let style = {color: "green"};
-        price = price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        let priceString = "";
         if(price < 0){
             style = {color: "red"};
-            price = "-$" + Math.abs(price).toFixed(2);
+            priceString = "-$" + Math.abs(price).toFixed(2).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
         }
         else {
-            price = "$" + price;
+            priceString = "$" + price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
         }
-        return <span style={style}>{price}</span>;
+        return <span style={style}>{priceString}</span>;
     }
 
     priceifyPercent(price){
@@ -81,6 +82,21 @@ class StockData extends Component {
         this.setState({shares: event.target.value});
     }
 
+    updateAverageCost = (event) => {
+        event.preventDefault();
+    }
+
+    changeAverageCost = (event) => {
+        if(event.target.value < 0 || event.target.value === ""){
+            this.setState({customAverageCost: 0});
+            return;
+        }
+        else if(event.target.value > 9999999){
+            return;
+        }
+        this.setState({customAverageCost: event.target.value});
+    }
+
     render() {
         const loss = " loss";
         const gain = " gain";
@@ -99,13 +115,13 @@ class StockData extends Component {
                     <Container className="yearlyDataContainer">
                         <Row>
                             <Col>
-                                <span className="yearlyData">Year Low: {this.priceifyNoColor(this.props.yearLow.toFixed(2))}</span>
+                                <span className="yearlyData" id="yearLow">Year Low: {this.priceifyNoColor(this.props.yearLow.toFixed(2))}</span>
                             </Col>
                             <Col>
-                                <span className="yearlyData">Year Average: {this.priceifyNoColor(this.getYearlyAverage().toFixed(2))}</span>
+                                <span className="yearlyData" id="yearAverage">Year Average: {this.priceifyNoColor(this.getYearlyAverage().toFixed(2))}</span>
                             </Col>
                             <Col>
-                                <span className="yearlyData">Year High: {this.priceifyNoColor(this.props.yearHigh.toFixed(2))}</span>
+                                <span className="yearlyData" id="yearHigh">Year High: {this.priceifyNoColor(this.props.yearHigh.toFixed(2))}</span>
                             </Col>
                         </Row>
                         <br/>
@@ -205,11 +221,52 @@ class StockData extends Component {
                                 </Card>
                             </Col>
                         </Row>
+                        <br/>
+                        <Row>
+                            <Col>
+                                <Card className="text-center customCostCard">
+                                    <Card.Header id="customCostTitle">Custom Average Cost</Card.Header>
+                                    <Card.Body>
+                                        <Card.Title>
+                                            <span className="totalProfitTitle">Total Profit:</span>
+                                            <br/>
+                                            <span className="totalProfit">{this.priceify(this.getProfit(this.state.customAverageCost, this.props.currentPrice).toFixed(2))}</span>
+                                        </Card.Title>
+                                        <Card.Subtitle className="mb-2 text-muted">If Purchased At Your Custom Average Cost</Card.Subtitle>
+                                        <Card.Text>
+                                            {this.priceifyNoColor(this.state.customAverageCost)} per share
+                                            <br/>
+                                            Total Cost: {this.priceifyNoColor(this.getTotalCost(this.state.customAverageCost))}
+                                            <br/>
+                                            Current Value: {this.priceifyNoColor((this.props.currentPrice * this.state.shares).toFixed(2))}
+                                            <br/>
+                                            <span>
+                                                {this.priceifyPercent(this.getPercentChange(this.state.customAverageCost, this.props.currentPrice).toFixed(2))}
+                                                {this.getPercentChange(this.state.customAverageCost, this.props.currentPrice).toFixed(2) < 0 ? loss : gain}
+                                            </span>
+                                        </Card.Text>
+                                        <Form onSubmit={this.updateAverageCost} className="averageCostForm">
+                                            <Form.Control
+                                                value={this.state.customAverageCost === 0 ? "" : this.state.customAverageCost}
+                                                placeholder=""
+                                                type="number"
+                                                size="lg"
+                                                onChange={this.changeAverageCost}
+                                                min="0"
+                                                max="9999999"
+                                            />
+                                        </Form>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
                     </Container>
                     {line}
-                    <CompanyData
-                        ticker={this.props.ticker}
-                    />
+                    {/*<CompanyData*/}
+                    {/*    key={this.props.ticker}*/}
+                    {/*    ticker={this.props.ticker}*/}
+                    {/*    name={this.props.name}*/}
+                    {/*/>*/}
                 </div>
             );
         }

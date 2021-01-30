@@ -15,6 +15,5 @@ https://yearlyreturncalculator.netlify.app/
 
 # Future Updates
 
-1. Allow for custom average cost
-2. Add company information
-3. Add support for Cryptocurrency
+1. Add company information
+2. Add support for Cryptocurrency

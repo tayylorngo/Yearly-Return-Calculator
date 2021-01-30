@@ -8,7 +8,8 @@ import StockData from "../StockData/StockData";
 class Stock extends Component {
     state = {
         ticker: "",
-        results: []
+        results: [],
+        // results2: []
     }
 
     loadStock() {

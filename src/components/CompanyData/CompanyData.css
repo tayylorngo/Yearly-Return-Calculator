@@ -1,0 +1,22 @@
+#stockDescription{
+    width: 75%;
+    margin: auto;
+    font-size: 1rem;
+}
+
+#stockData{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#companyDataContainer{
+    align-items: center;
+}
+
+#descriptionTitle{
+    float: left;
+}
+
+#stockName{
+    margin-bottom: 1%;
+}
