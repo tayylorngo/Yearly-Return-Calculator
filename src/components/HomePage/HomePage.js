@@ -13,7 +13,7 @@ class HomePage extends Component{
                             <Nav className="m-auto">
                                 {/*<Link to="/home" className="navLink2">Home Page</Link>*/}
                                 <Link to="/stocks" className="navLink2">Stock Calculator </Link>
-                                <Link to="/stocks" className="navLink2">CryptoCurrency Calculator</Link>
+                                <Link to="/stocks" className="navLink2">Cryptocurrency Calculator</Link>
                                 <Link to="/stocks" className="navLink2">Compound Interest Calculator</Link>
                                 <a href="https://github.com/tayylorngo/Stock-Yearly-Return-Calculator" className="navLink2">Source Code</a>
                             </Nav>
