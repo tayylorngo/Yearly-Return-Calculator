@@ -32,6 +32,19 @@ body {
     text-decoration: none;
 }
 
+#createdBy{
+    color: black;
+    font-size: 3rem;
+}
+
+#createdBy:hover{
+    color: white;
+}
+
+#createdBy:link {
+    text-decoration: none;
+}
+
 #landing-header {
     z-index: 1;
     position: relative;

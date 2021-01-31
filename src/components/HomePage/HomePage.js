@@ -20,6 +20,10 @@ class HomePage extends Component{
                         </Navbar>
                         <h1 className="header1">{this.props.name}</h1>
                     </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h2><a id="createdBy" href="https://www.taylorngo.com/">Created by Taylor Ngo</a></h2>
                 </div>
 
                 <ul className="slideshow">
