@@ -6,7 +6,7 @@ import './Header.css';
 class Header extends Component {
     render() {
         return (
-            <div>
+            <div className="totalDiv">
                 <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
                         <Nav className="m-auto">
                             <Link to="/home" className="navLink">Home Page</Link>

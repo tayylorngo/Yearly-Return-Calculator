@@ -7,7 +7,6 @@ import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
 
 class App extends Component {
-
     render(){
         return (
             <BrowserRouter>
@@ -22,12 +21,13 @@ class App extends Component {
                             <HomePage />
                         </div>
                     }/>
-                    <Route path="/stocks" exact absolute render={() =>
-                        <div>
+                    <Route path="/stocks" exact absolute render={() => {
+                        return (
+                            <div className="stockPage">
                             <Header name="Stock Return Calculator"/>
                             <Stock />
-                        </div>
-                    }/>
+                        </div>);
+                    }}/>
                 </div>
             </BrowserRouter>
         );

@@ -36,7 +36,6 @@ class Stock extends Component {
 
     render() {
         const form = (
-            <div className="formDiv">
                     <Form onSubmit={this.updateStock}>
                         <Form.Control
                             placeholder="enter stock ticker/symbol"
@@ -45,34 +44,36 @@ class Stock extends Component {
                             onChange={this.changeStock}
                         />
                     </Form>
-            </div>
         );
 
         const stock = this.state.results.map(stock => {
-           return <StockData
-               name={stock.name}
-               ticker={stock.symbol}
-               currentPrice={stock.price}
-               yearLow={stock.yearLow}
-               yearHigh={stock.yearHigh}
-               key={stock.symbol}
-               volume={stock.volume}
-               averageVol={stock.avgVolume}
-               pe={stock.pe}
-           />
+           return (
+               <div>
+                   <StockData
+                       name={stock.name}
+                       ticker={stock.symbol}
+                       currentPrice={stock.price}
+                       yearLow={stock.yearLow}
+                       yearHigh={stock.yearHigh}
+                       key={stock.symbol}
+                       volume={stock.volume}
+                       averageVol={stock.avgVolume}
+                       pe={stock.pe}
+                   />
+               </div>)
         });
 
         return (
-            <div className="totalDiv">
-                <Container>
-                    <Row>
-                        <Col>
-                            {form}
-                        </Col>
-                    </Row>
-                </Container>
-               {stock}
-            </div>
+                <div>
+                    <Container>
+                        <Row>
+                            <Col>
+                                {form}
+                            </Col>
+                        </Row>
+                    </Container>
+                    {stock}
+                </div>
         );
    }
 }

@@ -1,5 +1,6 @@
 .formDiv{
     text-align: center;
+    background: white;
 }
 
 Form {
@@ -10,5 +11,4 @@ Form {
 Button{
     margin-top: 0.5%;
 }
-
 

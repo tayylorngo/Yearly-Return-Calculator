@@ -6,12 +6,11 @@ import {Link} from "react-router-dom";
 class HomePage extends Component{
     render() {
         return (
-            <div>
+            <div className="homepageFill">
                 <div id="landing-header">
                     <div>
                         <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
                             <Nav className="m-auto">
-                                {/*<Link to="/home" className="navLink2">Home Page</Link>*/}
                                 <Link to="/stocks" className="navLink2">Stock Calculator </Link>
                                 <Link to="/stocks" className="navLink2">Cryptocurrency Calculator</Link>
                                 <Link to="/stocks" className="navLink2">Compound Interest Calculator</Link>
