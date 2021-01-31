@@ -33,8 +33,10 @@ body {
 }
 
 #createdBy{
+    font-weight: bold;
     color: black;
     font-size: 3rem;
+    font-family: 'Oxygen', sans-serif;
 }
 
 #createdBy:hover{
@@ -86,19 +88,19 @@ body {
     background-image: url(https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 }
 .slideshow li:nth-child(2) {
-    background-image: url(https://images.pexels.com/photos/3760514/pexels-photo-3760514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     animation-delay: 10s;
 }
 .slideshow li:nth-child(3) {
-    background-image: url(https://images.pexels.com/photos/1037913/pexels-photo-1037913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/5748801/pexels-photo-5748801.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     animation-delay: 20s;
 }
 .slideshow li:nth-child(4) {
-    background-image: url(https://images.pexels.com/photos/5749806/pexels-photo-5749806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/9660/business-money-pink-coins.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     animation-delay: 30s;
 }
 .slideshow li:nth-child(5) {
-    background-image: url(https://images.pexels.com/photos/5717224/pexels-photo-5717224.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/1037914/pexels-photo-1037914.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     animation-delay: 40s;
 }
 
