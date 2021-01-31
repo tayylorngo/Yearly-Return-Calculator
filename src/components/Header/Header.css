@@ -1,5 +1,18 @@
 .header1{
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 1%;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#navBarContainer{
+    width: 30%;
+    margin-left: 35%;
+}
+
+.navLink{
+    margin-top: 3%;
+    font-weight: bold;
+    margin-right: 2%;
+    font-size: 1.25rem;
+    color: black;
 }

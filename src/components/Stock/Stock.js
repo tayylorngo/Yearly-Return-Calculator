@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from "axios";
 import './Stock.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col, Form, Button} from "react-bootstrap";
+import {Container, Row, Col, Form} from "react-bootstrap";
 import StockData from "../StockData/StockData";
 
 class Stock extends Component {
@@ -39,13 +39,12 @@ class Stock extends Component {
             <div className="formDiv">
                     <Form onSubmit={this.updateStock}>
                         <Form.Control
-                            placeholder="enter ticker/symbol"
+                            placeholder="enter stock ticker/symbol"
                             type="text"
                             size="lg"
                             onChange={this.changeStock}
                         />
                     </Form>
-                <Button onClick={this.updateStock} variant="success">Submit</Button>{' '}
             </div>
         );
 
