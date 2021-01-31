@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
 body {
     background-color: #000;
 }
@@ -19,6 +21,7 @@ body {
     margin-right: 2%;
     font-size: 3rem;
     color: black;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .navLink2:hover{
