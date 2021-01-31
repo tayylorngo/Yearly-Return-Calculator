@@ -13,7 +13,8 @@ based on a fixed interest rate.
 
 ## Select one of the options on the home page.
 
-### 1. Stock Calculator:
+### 1. Stock Calculator: 
+https://yearlyreturncalculator.netlify.app/stocks
 * Enter the stock ticker/symbol, and the stock data will appear.
 
 * You can adjust the number of shares to calculate the total return.
@@ -22,14 +23,15 @@ based on a fixed interest rate.
 
 * The company data/information is at the bottom of the page.
 
-### 2. Cryptocurrency Calculator
+### 2. Cryptocurrency Calculator: 
+https://yearlyreturncalculator.netlify.app/crypto
 
 * Coming soon
 
-### 3. Compound Interest Calculator
+### 3. Compound Interest Calculator: 
+https://yearlyreturncalculator.netlify.app/compoundinterest
 
 * Coming soon
-
 
 # Future Updates
 
