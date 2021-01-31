@@ -115,18 +115,18 @@ class StockData extends Component {
                         <h2 id="currentPrice">Current Price: {this.priceifyNoColor(this.props.currentPrice)}</h2>
                     </div>
                     <Container className="yearlyDataContainer">
-                        <Row>
-                            <Col>
-                                <span className="yearlyData" id="yearLow">Year Low: {this.priceifyNoColor(this.props.yearLow.toFixed(2))}</span>
-                            </Col>
-                            <Col>
-                                <span className="yearlyData" id="yearAverage">Year Average: {this.priceifyNoColor(this.getYearlyAverage().toFixed(2))}</span>
-                            </Col>
-                            <Col>
-                                <span className="yearlyData" id="yearHigh">Year High: {this.priceifyNoColor(this.props.yearHigh.toFixed(2))}</span>
-                            </Col>
-                        </Row>
-                        <br/>
+                        {/*<Row>*/}
+                        {/*    <Col>*/}
+                        {/*        <span className="yearlyData" id="yearLow">Year Low: {this.priceifyNoColor(this.props.yearLow.toFixed(2))}</span>*/}
+                        {/*    </Col>*/}
+                        {/*    <Col>*/}
+                        {/*        <span className="yearlyData" id="yearAverage">Year Average: {this.priceifyNoColor(this.getYearlyAverage().toFixed(2))}</span>*/}
+                        {/*    </Col>*/}
+                        {/*    <Col>*/}
+                        {/*        <span className="yearlyData" id="yearHigh">Year High: {this.priceifyNoColor(this.props.yearHigh.toFixed(2))}</span>*/}
+                        {/*    </Col>*/}
+                        {/*</Row>*/}
+                        {/*<br/>*/}
                         <Row>
                             <Col>
                                 <h2 id="numOfShares">Number of Shares: {this.state.shares}</h2>

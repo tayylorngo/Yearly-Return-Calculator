@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .header1{
     margin-top: 1%;
     margin-bottom: 1%;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 #navBarContainer{
@@ -13,6 +15,15 @@
     margin-top: 3%;
     font-weight: bold;
     margin-right: 2%;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     color: black;
+}
+
+.navLink:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.navLink:link {
+    text-decoration: none;
 }

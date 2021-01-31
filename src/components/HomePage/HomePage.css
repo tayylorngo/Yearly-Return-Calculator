@@ -1,0 +1,109 @@
+body {
+    background-color: #000;
+}
+
+.header2{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#navBarContainer2{
+    width: 30%;
+    margin-left: 35%;
+}
+
+.navLink2{
+    margin-top: 3%;
+    font-weight: bold;
+    margin-right: 2%;
+    font-size: 3rem;
+    color: black;
+}
+
+.navLink2:hover{
+    color: white;
+}
+
+.navLink2:link {
+    text-decoration: none;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1 {
+    color: #fff;
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url(https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+}
+.slideshow li:nth-child(2) {
+    background-image: url(https://images.pexels.com/photos/3760514/pexels-photo-3760514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+    background-image: url(https://images.pexels.com/photos/1037913/pexels-photo-1037913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+    background-image: url(https://images.pexels.com/photos/5749806/pexels-photo-5749806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+    background-image: url(https://images.pexels.com/photos/5717224/pexels-photo-5717224.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1
+    }
+    30% {
+        opacity: 0
+    }
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}

@@ -4,6 +4,7 @@ import Stock from "./components/Stock/Stock";
 import {Component} from "react";
 import {BrowserRouter, Route} from "react-router-dom";
 import Header from "./components/Header/Header";
+import HomePage from "./components/HomePage/HomePage";
 
 class App extends Component {
 
@@ -13,12 +14,12 @@ class App extends Component {
                 <div className="App">
                     <Route path="/" exact absolute render={() =>
                         <div>
-                            <Header name=""/>
+                            <HomePage />
                         </div>
                     }/>
                     <Route path="/home" exact absolute render={() =>
                         <div>
-                            <Header name=""/>
+                            <HomePage />
                         </div>
                     }/>
                     <Route path="/stocks" exact absolute render={() =>

@@ -15,6 +15,7 @@ class Header extends Component {
                             <Link to="/stocks" className="navLink">Compound Interest Calculator</Link>
                         </Nav>
                 </Navbar>
+                <hr/>
                 <h1 className="header1">{this.props.name}</h1>
             </div>
         );
