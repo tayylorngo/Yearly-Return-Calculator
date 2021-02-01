@@ -72,7 +72,11 @@ class CompoundInterest extends Component {
         let n = this.state.compounded;
         let t = this.state.timeInYears;
 
-        if(P === "" || PMT === "" || r === "" || n === "" || t === ""){
+        if(PMT === ""){
+            PMT = 0;
+        }
+
+        if(P === "" || r === "" || n === "" || t === ""){
             return;
         }
 

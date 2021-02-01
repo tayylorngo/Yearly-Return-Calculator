@@ -35,8 +35,14 @@ https://yearlyreturncalculator.netlify.app/crypto
 ### 3. Compound Interest Calculator: 
 https://yearlyreturncalculator.netlify.app/compoundinterest
 
-* Coming soon
+* Enter your initial investment
+
+* Enter your monthly contribution (leave blank for 0 or enter 0)
+
+* Enter interest rate (as a percentage)
+
+* Select compound frequency (Annually, Semiannually, or Monthly)
 
 # Future Updates
 
-1. Add compound interest calculator
+1. Update CSS?
