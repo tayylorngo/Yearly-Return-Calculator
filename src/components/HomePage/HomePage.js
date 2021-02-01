@@ -12,7 +12,7 @@ class HomePage extends Component{
                         <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
                             <Nav className="m-auto">
                                 <Link to="/stocks" className="navLink2">Stock Calculator </Link>
-                                <Link to="/stocks" className="navLink2">Cryptocurrency Calculator</Link>
+                                <Link to="/crypto" className="navLink2">Cryptocurrency Calculator</Link>
                                 <Link to="/stocks" className="navLink2">Compound Interest Calculator</Link>
                                 <a href="https://github.com/tayylorngo/Stock-Yearly-Return-Calculator" className="navLink2">Source Code</a>
                             </Nav>

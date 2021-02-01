@@ -1,0 +1,60 @@
+.yearlyData {
+    font-size: 2rem;
+    align-items: center;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.yearlyDataContainer{
+    align-items: center;
+    margin-bottom: 1.5%;
+}
+
+.stockNameAndPrice{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.profitCard {
+    margin-left: 3%;
+}
+
+.numberOfSharesForm{
+    width: 20%;
+}
+
+.totalProfitTitle{
+    font-size: 2rem;
+}
+
+.totalProfit {
+    font-size: 2.25rem;
+}
+
+.percentLoss{
+    color: rgb(255,80,0);
+}
+
+.TESTING {
+    border: solid 1px black;
+    width: 100%;
+}
+
+.customCostCard{
+    margin: auto;
+    width: 50%;
+}
+
+.averageCostForm{
+    margin-top: 1%;
+    width: 25%;
+}
+
+#currentPrice{
+    font-size: 2.5rem;
+}
+
+#numOfShares{
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif
+}
