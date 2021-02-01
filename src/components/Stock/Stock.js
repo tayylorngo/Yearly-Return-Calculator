@@ -3,7 +3,7 @@ import axios from "axios";
 import './Stock.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Row, Col, Form} from "react-bootstrap";
-import StockData from "../StockData/StockData";
+import StockData from "./StockData/StockData";
 
 class Stock extends Component {
     state = {

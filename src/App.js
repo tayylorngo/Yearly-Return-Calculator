@@ -6,6 +6,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage/HomePage";
 import Crypto from "./components/Crypto/Crypto";
+import CompoundInterest from "./components/CompoundInterest/CompoundInterest";
 
 class App extends Component {
     render(){
@@ -35,6 +36,14 @@ class App extends Component {
                                 <Header name="Cryptocurrency Return Calculator"/>
                                 <Crypto />
                             </div>);
+                    }}/>
+                    <Route path="/compoundinterest" exact absolute render={() => {
+                        return (
+                            <div className="compoundInterestPage">
+                                <Header name="Compound Interest Return Calculator"/>
+                                <CompoundInterest />
+                            </div>
+                        );
                     }}/>
                 </div>
             </BrowserRouter>

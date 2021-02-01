@@ -12,7 +12,7 @@ class Header extends Component {
                             <Link to="/home" className="navLink">Home Page</Link>
                             <Link to="/stocks" className="navLink">Stock Calculator </Link>
                             <Link to="/crypto" className="navLink">CryptoCurrency Calculator</Link>
-                            <Link to="/stocks" className="navLink">Compound Interest Calculator</Link>
+                            <Link to="/compoundinterest" className="navLink">Compound Interest Calculator</Link>
                         </Nav>
                 </Navbar>
                 <hr/>

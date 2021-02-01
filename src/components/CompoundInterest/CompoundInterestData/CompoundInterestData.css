@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+#totalProfit{
+    font-size: 2.5rem;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#otherInformation{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.75rem;
+}
+
+.cardHeader{
+    font-size: 1.5rem;
+}

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import './Crypto.css';
 import {Col, Container, Form, Row} from "react-bootstrap";
 import axios from "axios";
-import CryptoData from "../CryptoData/CryptoData";
+import CryptoData from "./CryptoData/CryptoData";
 
 class Crypto extends Component {
 

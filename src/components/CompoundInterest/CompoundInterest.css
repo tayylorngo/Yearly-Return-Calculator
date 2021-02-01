@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+.inputTitle{
+    float: left;
+    margin-bottom: 3%;
+    font-family: 'Noto Serif', serif;
+}
+
+.compoundForm{
+    width: 75%;
+}
+
+.totalForm{
+    margin-top: 1.5%;
+}
+
+.submitButton{
+    float: left;
+    margin-top: 3%;
+    margin-right: 2%;
+}
