@@ -26,7 +26,11 @@ https://yearlyreturncalculator.netlify.app/stocks
 ### 2. Cryptocurrency Calculator: 
 https://yearlyreturncalculator.netlify.app/crypto
 
-* Coming soon
+* Enter the cryptocurrency ticker/symbol, and the cryptocurrency data will appear.
+
+* You can adjust the amount to calculate the total return.
+
+* The currency volume/average volume is at the bottom of the page.
 
 ### 3. Compound Interest Calculator: 
 https://yearlyreturncalculator.netlify.app/compoundinterest
@@ -35,5 +39,4 @@ https://yearlyreturncalculator.netlify.app/compoundinterest
 
 # Future Updates
 
-1. Add support for Cryptocurrency
-2. Add compound interest calculator
+1. Add compound interest calculator
