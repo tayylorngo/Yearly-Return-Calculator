@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import './HomePage.css';
 import {Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {FaGithub, FaLinkedinIn} from "react-icons/fa";
 
 class HomePage extends Component{
     render() {
@@ -23,6 +24,11 @@ class HomePage extends Component{
                     <br/>
                     <br/>
                     <h2><a id="createdBy" href="https://www.taylorngo.com/">Created by Taylor Ngo</a></h2>
+                    <br/>
+                        <h2 id="icons">
+                            <a href="https://github.com/tayylorngo/"><FaGithub/></a>
+                            <a href="https://www.linkedin.com/in/taylor-ngo/"><FaLinkedinIn/></a>
+                        </h2>
                 </div>
 
                 <ul className="slideshow">

@@ -33,7 +33,8 @@ class App extends Component {
                     <Route path="/crypto" exact absolute render={() => {
                         return (
                             <div className="cryptoPage">
-                                <Header name="Cryptocurrency Return Calculator"/>
+                                <Header
+                                    name="Cryptocurrency Return Calculator"/>
                                 <Crypto />
                             </div>);
                     }}/>
