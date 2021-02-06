@@ -66,21 +66,29 @@ class CompoundInterest extends Component {
     }
 
     calculateProfit = () => {
-        let P = this.state.initialInvestment;
-        let PMT = this.state.monthlyContribution;
-        let r = this.state.interestRate;
-        let n = this.state.compounded;
-        let t = this.state.timeInYears;
+        let P = Number(this.state.initialInvestment);
+        let PMT = Number(this.state.monthlyContribution);
+        let r = Number(this.state.interestRate);
+        let n = Number(this.state.compounded);
+        let t = Number(this.state.timeInYears);
 
-        if(PMT === ""){
-            PMT = 0;
-        }
+        this.setState({moneyPutIn: Number((Number((PMT * 12 * t)) + Number(P))).toFixed(2)});
 
-        if(P === "" || r === "" || n === "" || t === ""){
+        if(t === 0){
+            this.setState({years2: this.state.timeInYears});
+            this.setState({interestRate2: this.state.interestRatePercent});
+            this.setState({totalProfit: P});
+            this.setState({loaded: true});
             return;
         }
 
-        this.setState({moneyPutIn: PMT * 12 * t})
+        if(r === 0){
+            this.setState({years2: this.state.timeInYears});
+            this.setState({interestRate2: this.state.interestRatePercent});
+            this.setState({totalProfit: P + (PMT * 12 * t)});
+            this.setState({loaded: true});
+            return;
+        }
 
         if(this.state.compounded === 1){
             PMT *= 12;
@@ -97,7 +105,7 @@ class CompoundInterest extends Component {
 
         this.setState({years2: this.state.timeInYears});
         this.setState({interestRate2: this.state.interestRatePercent});
-        this.setState({totalProfit: A + contGains});
+        this.setState({totalProfit: (A + contGains).toFixed(2)});
         this.setState({loaded: true});
     }
 

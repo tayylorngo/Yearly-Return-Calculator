@@ -43,6 +43,9 @@ class CompoundInterestData extends Component {
     }
 
     getPercentChange(currentPrice, purchasePrice){
+        if(currentPrice === purchasePrice){
+            return 0;
+        }
         return (currentPrice - purchasePrice) / purchasePrice * 100;
     }
 
@@ -61,15 +64,15 @@ class CompoundInterestData extends Component {
                         <Card.Body>
                             <Card.Title>
                                 <span id="totalProfit">
-                                   After {years} years you will have around {this.priceify(this.props.allData.totalProfit.toFixed(2))}
+                                   After {years} years you will have around {this.priceify(this.props.allData.totalProfit)}
                                 </span>
                                 <br/>
                                 <br/>
                                 <div id="otherInformation">
-                                    Principal Amount (amount you put in): {this.priceifyNoColor(this.props.allData.moneyPutIn.toFixed(2))}
+                                    Principal Amount (amount you put in): {this.priceifyNoColor(this.props.allData.moneyPutIn)}
                                     <br/>
                                     <br/>
-                                    Percent Gain: {this.priceifyPercent(this.getPercentChange(this.props.allData.totalProfit, this.props.allData.moneyPutIn).toFixed(2))}
+                                    Percent Gain: {this.priceifyPercent(this.getPercentChange(this.props.allData.totalProfit.toFixed(2), this.props.allData.moneyPutIn).toFixed(2))}
                                     <br/>
                                     <br/>
                                     Money Earned From Interest ({this.props.allData.interestRate2}%): {this.priceify((this.props.allData.totalProfit - this.props.allData.moneyPutIn).toFixed(2))}

@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import {FaBitcoin} from 'react-icons/fa';
 import './Header.css';
 
 class Header extends Component {
     render() {
-        let icon;
-        if(this.props.name === "Cryptocurrency Return Calculator"){
-            icon = <FaBitcoin/>
-        }
         return (
             <div className="totalDiv">
                 <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
