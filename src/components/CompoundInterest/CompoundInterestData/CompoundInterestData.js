@@ -72,7 +72,7 @@ class CompoundInterestData extends Component {
                                     Principal Amount (amount you put in): {this.priceifyNoColor(this.props.allData.moneyPutIn)}
                                     <br/>
                                     <br/>
-                                    Percent Gain: {this.priceifyPercent(this.getPercentChange(this.props.allData.totalProfit.toFixed(2), this.props.allData.moneyPutIn).toFixed(2))}
+                                    Percent Gain: {this.priceifyPercent(this.getPercentChange(this.props.allData.totalProfit, this.props.allData.moneyPutIn).toFixed(2))}
                                     <br/>
                                     <br/>
                                     Money Earned From Interest ({this.props.allData.interestRate2}%): {this.priceify((this.props.allData.totalProfit - this.props.allData.moneyPutIn).toFixed(2))}
